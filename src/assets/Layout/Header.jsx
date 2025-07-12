@@ -6,7 +6,7 @@ import { MobilePopUp } from "./MobilePopUp";
 
 export function Header() {
 
-    const { userData, toggleLightMode, lightMode, isMobile } = useContext(MyContext);
+    const { userData, toggleLightMode, lightMode, isMobile, token } = useContext(MyContext);
 
     const[visible, setVisible] = useState(false);
 
@@ -57,15 +57,14 @@ export function Header() {
                 <p 
                 className="dark"
                 onClick={toggle}
-                >🌃</p> :
-                <p 
+                >🌃</p> :                 <p 
                 className="light"
                 onClick={toggle}
                 >🌁</p>}
                 
             </div> 
 
-           <div 
+           { token ? <div 
            className="user-info"
            onClick={toggleVisible}
            >
@@ -85,7 +84,7 @@ export function Header() {
             ) : (
             <p>No user data</p>
             )}
-                </div>
+                </div> : null}
             </div> : 
             <div
             className="mobile-right"

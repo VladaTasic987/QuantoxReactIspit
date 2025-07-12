@@ -5,7 +5,7 @@ import { MyContext } from "../../Context";
 
 export function MobilePopUp () {
 
-    const {toggleLightMode, handleLogout} = useContext(MyContext);
+    const {toggleLightMode, handleLogout, token} = useContext(MyContext);
 
     const [userVisible, setUserVisible] = useState(false);
 
@@ -17,10 +17,10 @@ export function MobilePopUp () {
 
         <div className="mobile-container">
         
-        <div
+        {token ? <div
         className="profile"
         onClick={ToggleUserVisible}
-        >🤺My Profile</div>
+        >🤺My Profile</div> : null}
 
         <div
         className="theme-change"
