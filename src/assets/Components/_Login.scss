@@ -105,13 +105,16 @@
 }
 
 /* 📱 Mobile view */
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   #login-container-dark,
   #login-container-light {
-    width: 90%;
-    height: auto;
-    margin: 100px auto;
+    width: 320px;
+    height: 350px;
     padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     .login-heading {
       font-size: 28px;

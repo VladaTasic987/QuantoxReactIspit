@@ -1,0 +1,31 @@
+
+.mobile-container {
+    width: 140px;
+    height: 150px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    border-radius: 20px;
+    background-color: rgb(111, 111, 108);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+
+    .profile {
+       cursor: pointer;   
+    }
+
+    .theme-change {
+       cursor: pointer; 
+    }
+
+    .logout {
+        cursor: pointer;
+    }
+
+
+}

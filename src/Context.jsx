@@ -22,9 +22,25 @@ export function MyContextProvider({ children }) {
     return saved !== null ? JSON.parse(saved) : true; 
   });
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 720);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   function toggleLightMode() {
     setLightMode(prev => !prev);
   }
+
+  const handleLogout = () => {
+    localStorage.removeItem("Token");
+    localStorage.removeItem("userData");
+    window.location.reload(); 
+  };
 
   
   useEffect(() => {
@@ -66,6 +82,8 @@ export function MyContextProvider({ children }) {
         setToken,
         lightMode,
         toggleLightMode,
+        isMobile,
+        handleLogout,
       }}
     >
       {children}

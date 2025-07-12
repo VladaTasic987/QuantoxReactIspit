@@ -130,14 +130,15 @@
     }
 }
 
-/* 📱 Mobile view adjustments */
-@media (max-width: 600px) {
+
+@media (max-width: 720px) {
     #header-container-dark,
     #header-container-light {
         height: auto;
-        flex-direction: column;
-        align-items: flex-start;
         padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         .logo {
             width: 25px;
@@ -147,15 +148,12 @@
         .logo-img {
             width: 25px;
             height: 25px;
-            margin-left: 0;
+            margin-left: 20px;
         }
 
-        .right-content {
-            flex-wrap: wrap;
-            width: 100%;
-            justify-content: flex-start;
-            gap: 5px;
-            height: auto;
+        .mobile-right {
+            margin-right: 30px;
+            cursor: pointer;
         }
 
         .user-info {

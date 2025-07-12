@@ -2,21 +2,28 @@ import { useContext, useState } from "react";
 import { MyContext } from "../../Context";
 import logo from "../Images/vite.svg";
 import { PopUp } from "./PopUp";
+import { MobilePopUp } from "./MobilePopUp";
 
 export function Header() {
 
+    const { userData, toggleLightMode, lightMode, isMobile } = useContext(MyContext);
+
     const[visible, setVisible] = useState(false);
+
+    const[toggleImage, setToggleImage] = useState(false);
+
+    const[mobile, setMobile] = useState(false);
 
     function toggleVisible () {
         setVisible(newVisible => !newVisible)
     }
-
-    const { userData, toggleLightMode, lightMode } = useContext(MyContext);
     
-    const[toggleImage, setToggleImage] = useState(false);
-
     function toggle () {
         setToggleImage(newToggle => !newToggle)
+    }
+
+    function toggleMobile () {
+        setMobile(newMobile => !newMobile)
     }
 
     return (
@@ -34,9 +41,11 @@ export function Header() {
                 alt="logo"
                 className="logo-img"
                 />
-            </div>
+            </div> 
 
-            <div 
+            {mobile ? <MobilePopUp/> : null}
+
+            {! isMobile ? <div 
             className="right-content"
             
             >
@@ -54,7 +63,7 @@ export function Header() {
                 onClick={toggle}
                 >🌁</p>}
                 
-            </div>
+            </div> 
 
            <div 
            className="user-info"
@@ -67,7 +76,7 @@ export function Header() {
                 src={userData.image}
                 alt={`${userData.firstName}'s thumbnail`}
                 className="user-image"
-            />
+            /> 
             )}
             <p
             className="user-name"
@@ -77,8 +86,12 @@ export function Header() {
             <p>No user data</p>
             )}
                 </div>
-            </div>
-        </div>
+            </div> : 
+            <div
+            className="mobile-right"
+            onClick={toggleMobile}
+            >📱</div>}
+        </div> 
 
     )
 

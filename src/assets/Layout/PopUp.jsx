@@ -5,19 +5,13 @@ import { MyContext } from "../../Context";
 
 export function PopUp() {
 
-  const { lightMode } = useContext(MyContext);
+  const { lightMode, handleLogout } = useContext(MyContext);
 
   const [visible, setVisible] = useState(false);
 
   function toggleVisible() {
     setVisible(newVisible => !newVisible)
   }
-
-  const handleLogout = () => {
-    localStorage.removeItem("Token");
-    localStorage.removeItem("userData");
-    window.location.reload(); 
-  };
 
   return (
     
