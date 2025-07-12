@@ -1,0 +1,137 @@
+#login-container-dark,
+#login-container-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  margin: 200px auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+
+  .login-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  label {
+    font-size: 16px;
+    margin: 10px 0 4px;
+  }
+
+  input {
+    width: 300px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #4c8eda;
+    }
+  }
+
+  .subbmit-button {
+    width: 330px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 60px;
+  }
+}
+
+// dark theme specific colors
+#login-container-dark {
+  background-color: #1e1e2f;
+  color: #f0f0f0;
+
+  .login-heading { color: #f0f0f0; }
+
+  label { color: #cccccc; }
+
+  input {
+    border: none;
+    background-color: #2c2c3e;
+    color: #f0f0f0;
+  }
+
+  .subbmit-button {
+    background-color: #4c8eda;
+    color: #fff;
+
+    &:hover {
+      background-color: #3a6fb0;
+    }
+  }
+}
+
+// light theme specific colors
+#login-container-light {
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  .login-heading { color: #333333; }
+
+  label { color: #555555; }
+
+  input {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333333;
+  }
+
+  .subbmit-button {
+    background-color: #4c8eda;
+    color: #fff;
+
+    &:hover {
+      background-color: #3a6fb0;
+    }
+  }
+}
+
+/* 📱 Mobile view */
+@media (max-width: 480px) {
+  #login-container-dark,
+  #login-container-light {
+    width: 90%;
+    height: auto;
+    margin: 100px auto;
+    padding: 15px;
+
+    .login-heading {
+      font-size: 28px;
+    }
+
+    .form {
+      width: 100%;
+    }
+
+    label {
+      font-size: 14px;
+    }
+
+    input {
+      font-size: 13px;
+    }
+
+    .subbmit-button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+}

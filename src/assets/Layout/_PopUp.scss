@@ -1,0 +1,47 @@
+#pop-up-menu-dark {
+    width: 100px;
+    height: 80px;
+    background-color: rgb(227, 225, 221);
+    position: absolute;
+    right: 15px;
+    top: 70px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    p:hover {
+        color: black;
+    }
+
+
+}
+
+#pop-up-menu-light {
+    width: 100px;
+    height: 80px;
+    background-color: rgb(80, 78, 77);
+    position: absolute;
+    right: 15px;
+    top: 70px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    p:hover {
+        color: black;
+    }
+}

@@ -1,0 +1,32 @@
+
+#user-info-container-dark {
+
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 150px;
+    right: 120px;
+    background-color: rgb(93, 92, 90);
+    border-radius: 20px;
+    z-index: 100;
+
+    p {
+        margin-left: 12px;
+    }
+}
+
+#user-info-container-light {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 150px;
+    right: 120px;
+    background-color: #f0f0f0; 
+    color: #1e1e1e;            
+    border-radius: 20px;
+    z-index: 100;
+
+    p {
+        margin-left: 12px;
+    }
+}
