@@ -8,8 +8,6 @@ import { useContext } from "react";
 import { MyContext } from "../../Context";
 
 
-
-
 const schema = z.object({
   username: z.string().min(0, "/"),
   password: z.string().min(6, "Lozinka mora imati bar 6 karaktera"),

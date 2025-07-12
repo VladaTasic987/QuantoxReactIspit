@@ -15,7 +15,6 @@ export function UserInfo() {
       <p><strong>First Name:</strong> {userData.firstName}</p>
       <p><strong>Last Name:</strong> {userData.lastName}</p>
       <img src={userData.image} alt={`${userData.firstName} ${userData.lastName}`} />
-      {/* Add more fields as needed */}
     </div>
   );
 }

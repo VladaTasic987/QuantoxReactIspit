@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useContext } from "react";
+import { useEffect, useRef, useContext } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchProducts } from "../Api/ProductsApi";
 import { MyContext } from "../../Context";
